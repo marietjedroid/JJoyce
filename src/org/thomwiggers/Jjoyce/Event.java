@@ -40,4 +40,12 @@ public class Event {
 	
     }
 
+    /**
+     * @param c
+     */
+    public void call(JoyceChannel c) {
+	// TODO Auto-generated method stub
+	
+    }
+
 }

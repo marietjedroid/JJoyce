@@ -72,8 +72,9 @@ public class JoyceRelay {
      * 
      * @param token
      * @param stream
+     * @throws HijackedChannelException 
      */
-    public void handleStream(String token, Stream stream) {
+    public void handleStream(String token, Stream stream) throws HijackedChannelException {
 	this.hub.handleStream(token, stream, this);
     }
     
@@ -82,8 +83,9 @@ public class JoyceRelay {
      * 
      * @param token
      * @param message
+     * @throws HijackedChannelException 
      */
-    public void handleMessage(String token, Message message) {
+    public void handleMessage(String token, Message message) throws HijackedChannelException {
 	this.hub.handleMessage(token, message, this);
     }
     
