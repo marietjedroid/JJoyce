@@ -25,7 +25,7 @@ package org.thomwiggers.Jjoyce.base;
  */
 public class JoyceRelay {
 
-    private JoyceHub hub;
+    protected JoyceHub hub;
 
 
     public JoyceRelay(JoyceHub hub) {

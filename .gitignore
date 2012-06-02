@@ -2,7 +2,7 @@
 ## apache libraries
 ####################
 src/org/apache/**
-
+lib/**
 
 #################
 ## Eclipse

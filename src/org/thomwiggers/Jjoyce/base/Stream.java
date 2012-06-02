@@ -16,10 +16,50 @@
  */
 package org.thomwiggers.Jjoyce.base;
 
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
+
+import org.apache.http.entity.mime.content.StringBody;
+
 /**
  * @author Thom Wiggers
  *
  */
-public class Stream {
+public class Stream extends StringBody{
+
+    /**
+     * @param text
+     * @param mimeType
+     * @param charset
+     * @throws UnsupportedEncodingException
+     */
+    public Stream(String text, String mimeType, Charset charset)
+	    throws UnsupportedEncodingException {
+	super(text, mimeType, charset);
+	// TODO Auto-generated constructor stub
+    }
+
+    
+    /**
+     * @param text
+     * @param charset
+     * @throws UnsupportedEncodingException
+     */
+    public Stream(final String text, final Charset charset) throws UnsupportedEncodingException {
+        this(text, "text/plain", charset);
+    }
+
+    /**
+     * Create a StringBody from the specified text.
+     * The mime type is set to "text/plain".
+     * The hosts default charset is used.
+     *
+     * @param text to be used for the body, not {@code null}
+     * @throws UnsupportedEncodingException
+     * @throws IllegalArgumentException if the {@code text} parameter is null
+     */
+    public Stream(final String text) throws UnsupportedEncodingException {
+        this(text, "text/plain", null);
+    }
 
 }

@@ -14,37 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.thomwiggers.Jjoyce.base;
-
-import java.util.HashMap;
+package org.thomwiggers.Jjoyce.comet;
 
 /**
  * @author Thom Wiggers
  *
  */
-public class MirteModule {
-    private HashMap<String, String> settings;
-    
-    private HashMap<String, SettingsEvent> onSettingChanged;
-    
-    public MirteModule(HashMap <String, String> settings){
-	this.settings = settings;
-    }
-    
-    /**
-     * 
-     */
-    public MirteModule() {
-	this.settings = new HashMap<String, String>();
-    }
+public class CometJoyceException extends Exception {
 
-    public String getSetting(String key) {
-	return settings.get(key);
-    }
-    
-    
-    public void changeSetting(String key, Object value) {
-	if(onSettingChanged.containsKey(key))
-	    onSettingChanged.get(key).call();
-    }
 }

@@ -212,4 +212,26 @@ public class JoyceHub extends MirteModule {
 	this.channelToRelay.remove(relay);
     }
 
+    /**
+     * @return path
+     */
+    public String getPath() {
+	return this.getSetting("path");
+	
+    }
+
+    /**
+     * @return port
+     */
+    public String getPort() {
+	return this.getSetting("port");
+    }
+
+    /**
+     * @return host
+     */
+    public String getHost() {
+	return this.getSetting("host");
+    }
+
 }
