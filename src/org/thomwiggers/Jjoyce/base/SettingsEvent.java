@@ -14,17 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.thomwiggers.Jjoyce;
+package org.thomwiggers.Jjoyce.base;
 
 /**
  * @author Thom Wiggers
  *
  */
-public class UnsupportedProtocolException extends JoyceException {
+public class SettingsEvent extends Event {
 
-	/**
-	 * Java bs.
-	 */
-	private static final long serialVersionUID = 1673392954936364613L;
+    /**
+     * 
+     */
+    public void call() {
+	// TODO Auto-generated method stub
+	
+    }
 
 }

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.thomwiggers.Jjoyce;
+package org.thomwiggers.Jjoyce.base;
 
 /**
  * This class handles the Joyce channel streams
@@ -37,44 +37,79 @@ public class JoyceChannel {
 	/**
 	 * Event to register message events to
 	 */
-	private Event onMessage;
+	private MessageEvent onMessage;
 
 	/**
 	 * Event to register stream events to
 	 */
-	private Event onStream; 
+	private StreamEvent onStream; 
 	
 	public JoyceChannel(JoyceRelay relay, String token) {
 	    this.relay = relay;
 	    this.token = token;
-	    this.onMessage = new Event();
-	    this.onStream  = new Event();
+	    this.onMessage = new MessageEvent();
+	    this.onStream  = new StreamEvent();
 	}
 	
-	public void sendStream(Stream stream) throws NotImplementedException {
+	/**
+	 * Send a blocking stream 
+	 * 
+	 * @param stream
+	 */
+	public void sendStream(Stream stream) {
 	    this.relay.sendStream(token, stream, true);
 	}
 	
+	/**
+	 * Send a stream 
+	 * 
+	 * @param stream
+	 * @param blocking
+	 * @throws NotImplementedException
+	 */
 	public void sendStream(Stream stream, boolean blocking) throws NotImplementedException {
 	    this.relay.sendStream(this.token, stream, blocking);
 	}
 	
+	/**
+	 * Send a message 
+	 * 
+	 * @param message
+	 * @throws NotImplementedException
+	 */
 	public void sendMessage(Message message) throws NotImplementedException {
 	    this.relay.sendMessage(message);
 	}
 	
+	/**
+	 * Handle an incoming message
+	 * 
+	 * @param message
+	 */
 	public void handleMessage(Message message) {
 	    this.onMessage.call(message);
 	}
 	
+	/**
+	 * Handle an incoming stream
+	 * 
+	 * @param stream
+	 */
 	public void handleStream(Stream stream) {
 	    this.onStream.call(stream);
 	}
 	
+	
+	/**
+	 * Close this channel
+	 */
 	public void close() {
 	    this.relay.closeChannel(this.token);
 	}
 	
+	/**
+	 * This method is called after a channel is closed. 
+	 */
 	public void afterClose() {
 	    
 	}

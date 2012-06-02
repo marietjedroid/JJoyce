@@ -14,17 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.thomwiggers.Jjoyce;
+package org.thomwiggers.Jjoyce.base;
 
 /**
  * @author Thom Wiggers
  *
  */
-public class HijackedChannelException extends JoyceException {
-
-	/**
-	 * Java blah
-	 */
-	private static final long serialVersionUID = -9105363283590882205L;
+public class Stream {
 
 }

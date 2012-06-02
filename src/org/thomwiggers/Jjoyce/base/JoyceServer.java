@@ -14,12 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.thomwiggers.Jjoyce;
+package org.thomwiggers.Jjoyce.base;
 
 /**
  * @author Thom Wiggers
  *
  */
-public class Stream {
-
+public class JoyceServer extends JoyceHub {
+    public JoyceServer()
+    {
+	super();
+    }
 }

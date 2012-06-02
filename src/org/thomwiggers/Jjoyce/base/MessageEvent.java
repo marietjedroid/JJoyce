@@ -14,17 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.thomwiggers.Jjoyce;
+package org.thomwiggers.Jjoyce.base;
 
 /**
  * @author Thom Wiggers
  *
  */
-public class NotImplementedException extends JoyceException {
+public class MessageEvent extends Event {
 
     /**
-     * 
+     * @param message
      */
-    private static final long serialVersionUID = 473335915770579485L;
-
+    public void call(Message message) {
+	// TODO Auto-generated method stub
+	
+    }
 }

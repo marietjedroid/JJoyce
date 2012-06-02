@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.thomwiggers.Jjoyce;
+package org.thomwiggers.Jjoyce.base;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
@@ -28,7 +28,7 @@ import java.util.HashMap;
  * @author Thom Wiggers
  * 
  */
-public class JoyceHub {
+public class JoyceHub extends MirteModule {
 
     /**
      * Channel list
@@ -48,11 +48,12 @@ public class JoyceHub {
     /**
      * Event for new channel creations
      */
-    private Event newChannelEvent = new Event();
+    private ChannelEvent newChannelEvent = new ChannelEvent();
 
     private HashMap<JoyceRelay, ArrayList<String>> relayToChannels;
 
     public JoyceHub() {
+	super();
 	this.channels = new HashMap<String, JoyceChannel>();
 	this.channelToRelay = new HashMap<String, JoyceRelay>();
 	this.relayToChannels = new HashMap<JoyceRelay, ArrayList<String>>();

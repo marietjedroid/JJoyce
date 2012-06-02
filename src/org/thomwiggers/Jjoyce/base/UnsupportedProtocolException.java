@@ -14,17 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.thomwiggers.Jjoyce;
+package org.thomwiggers.Jjoyce.base;
 
 /**
  * @author Thom Wiggers
  *
  */
-public class JoyceException extends Exception {
+public class UnsupportedProtocolException extends JoyceException {
 
 	/**
-	 * Java blah.
+	 * Java bs.
 	 */
-	private static final long serialVersionUID = -1413287298548210664L;
+	private static final long serialVersionUID = 1673392954936364613L;
 
 }

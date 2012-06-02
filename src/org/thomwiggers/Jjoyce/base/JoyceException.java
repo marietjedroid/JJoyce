@@ -14,38 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.thomwiggers.Jjoyce;
+package org.thomwiggers.Jjoyce.base;
 
 /**
- * Implementation of Sarah.event
- * 
  * @author Thom Wiggers
  *
  */
-public class Event {
+public class JoyceException extends Exception {
 
-    /**
-     * @param stream
-     */
-    public void call(Stream stream) {
-	// TODO Auto-generated method stub
-	
-    }
-
-    /**
-     * @param message
-     */
-    public void call(Message message) {
-	// TODO Auto-generated method stub
-	
-    }
-
-    /**
-     * @param c
-     */
-    public void call(JoyceChannel c) {
-	// TODO Auto-generated method stub
-	
-    }
+	/**
+	 * Java blah.
+	 */
+	private static final long serialVersionUID = -1413287298548210664L;
 
 }

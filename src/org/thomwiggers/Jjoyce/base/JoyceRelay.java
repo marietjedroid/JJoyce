@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.thomwiggers.Jjoyce;
+package org.thomwiggers.Jjoyce.base;
 
 
 /**
@@ -39,9 +39,8 @@ public class JoyceRelay {
      * @param token
      * @param stream
      * @param blocking
-     * @throws NotImplementedException 
      */
-    public void sendStream(String token, Stream stream, boolean blocking) throws NotImplementedException {
+    public void sendStream(String token, Stream stream, boolean blocking) {
 	throw new NotImplementedException();
 	
     }
@@ -51,9 +50,8 @@ public class JoyceRelay {
      * No idea what it is supposed to do
      * 
      * @param message Message
-     * @throws NotImplementedException 
      */
-    public void sendMessage(Message message) throws NotImplementedException {
+    public void sendMessage(Message message) {
 	throw new NotImplementedException();
     }
     
