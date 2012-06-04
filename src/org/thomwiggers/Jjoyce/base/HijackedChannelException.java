@@ -23,6 +23,17 @@ package org.thomwiggers.Jjoyce.base;
 public class HijackedChannelException extends JoyceException {
 
 	/**
+     * @param string
+     */
+    public HijackedChannelException(String string) {
+	super(string);
+	// TODO Auto-generated constructor stub
+    }
+
+    public HijackedChannelException() {
+	super();
+    }
+	/**
 	 * Java blah
 	 */
 	private static final long serialVersionUID = -9105363283590882205L;

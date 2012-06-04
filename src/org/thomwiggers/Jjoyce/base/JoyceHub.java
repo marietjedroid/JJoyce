@@ -20,6 +20,8 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 
 /**
@@ -51,6 +53,8 @@ public class JoyceHub extends MirteModule {
     private ChannelEvent newChannelEvent = new ChannelEvent();
 
     private HashMap<JoyceRelay, ArrayList<String>> relayToChannels;
+    
+    private Executor threadPool = Executors.newCachedThreadPool();
 
     public JoyceHub() {
 	super();
@@ -58,6 +62,7 @@ public class JoyceHub extends MirteModule {
 	this.channelToRelay = new HashMap<String, JoyceRelay>();
 	this.relayToChannels = new HashMap<JoyceRelay, ArrayList<String>>();
     }
+    
 
     /**
      * Gets the channel for a relay
@@ -146,7 +151,7 @@ public class JoyceHub extends MirteModule {
      * @param relay
      * @return the channel created
      */
-    private JoyceChannel createChannel(String token, JoyceRelay relay) {
+    protected JoyceChannel createChannel(String token, JoyceRelay relay) {
 	if (token == null) {
 	    token = generateToken();
 	}
@@ -167,7 +172,7 @@ public class JoyceHub extends MirteModule {
      * 
      * @return a new token
      */
-    private String generateToken() {
+    protected String generateToken() {
 
 	while (true) {
 	    String attempt = new BigInteger(130, random).toString();
@@ -233,5 +238,19 @@ public class JoyceHub extends MirteModule {
     public String getHost() {
 	return this.getSetting("host");
     }
+
+    /**
+     * @return Executor thread pool
+     * 
+     */
+    public Executor getThreadPool() {
+	return threadPool;
+	
+    }
+    
+    public void setThreadPool(Executor tp) {
+	this.threadPool = tp;
+    }
+    
 
 }

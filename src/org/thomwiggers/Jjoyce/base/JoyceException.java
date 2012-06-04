@@ -23,6 +23,21 @@ package org.thomwiggers.Jjoyce.base;
 public class JoyceException extends Exception {
 
 	/**
+     * @param string
+     */
+    public JoyceException(String string) {
+	super(string);
+	// TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * 
+	 */
+	public JoyceException() {
+	    // TODO Auto-generated constructor stub
+	}
+
+	/**
 	 * Java blah.
 	 */
 	private static final long serialVersionUID = -1413287298548210664L;

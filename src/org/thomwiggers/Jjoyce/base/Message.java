@@ -16,10 +16,25 @@
  */
 package org.thomwiggers.Jjoyce.base;
 
+import org.json.JSONObject;
+
+
 /**
  * @author Thom Wiggers
  *
  */
-public class Message {
+public class Message{
 
+    private String content;
+
+    /**
+     * @param string
+     */
+    public Message(String string) {
+	this.content = string;
+    }
+
+    public String toString() {
+	return content;
+    }
 }

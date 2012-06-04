@@ -2,6 +2,7 @@
 ## apache libraries
 ####################
 src/org/apache/**
+src/org/json/**
 lib/**
 
 #################
